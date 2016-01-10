@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  section.container
+    h1 英単語テスト
+    
+    div.row
+      div.col-md-6 
+        h3 過去の問題
+        table.table
+          thead
+            tr
+              td 単語
+              td 音声認識した単語
+              td 正解・不正解
+          tbody#qlist
+        
+        button#nextBtn.btn.btn-primary 次の問題へ
+        button#inputBtn.btn.btn-default.disabled 再度回答する
+        
+      div.col-md-6 
+        h3 問題
+        p#alert
+        h1#question
+        p#inputText
+      
+      
+  script(src="/js/app.js")
