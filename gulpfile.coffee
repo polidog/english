@@ -2,7 +2,7 @@ gulp = require 'gulp'
 jade = require 'gulp-jade'
 webserver = require 'gulp-webserver'
 
-port = 3003
+port = 3000
 
 src =
   jade: 'src/jade/*.jade'
