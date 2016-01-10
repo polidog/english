@@ -1,6 +1,7 @@
 gulp = require 'gulp'
 jade = require 'gulp-jade'
 webserver = require 'gulp-webserver'
+ghPages = require 'gulp-gh-pages'
 
 port = 3000
 
@@ -38,5 +39,9 @@ gulp.task 'webserver', =>
 gulp.task 'watch', =>
   gulp.watch(src.jade, ['jade'])
   gulp.watch(src.js, ['js'])
+
+gulp.task 'deploy', =>
+  gulp.src 'dist/**/*'
+    .pipe ghPages()
 
 gulp.task 'default' ,['js', 'jade', 'data', 'webserver', 'watch']
