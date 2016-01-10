@@ -5,7 +5,7 @@ $(function(){
 
   var question = {
     filename: "sample.json",
-    baseDir: "/data/",
+    baseDir: "data/",
     lists: [],
     state: null,
     answer: [],
